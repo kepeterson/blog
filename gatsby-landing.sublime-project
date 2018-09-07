@@ -2,7 +2,7 @@
   "folders": [
     {
       "path": ".",
-      "folder_exclude_patterns": ["node_modules", "public"]
+      "folder_exclude_patterns": ["node_modules", "public", ".cache"]
     }
   ],
   "SublimeLinter.linters.eslint.disable": false
