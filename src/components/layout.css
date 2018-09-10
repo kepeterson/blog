@@ -1,5 +1,6 @@
 :root {
   --font-face: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --header-size: 75.6px;
 }
 
 html {
@@ -28,6 +29,7 @@ footer {
   padding: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .socials svg {
@@ -36,3 +38,30 @@ footer {
   fill: white;
   padding: 0 4px;
 }
+
+/* from https://css-tricks.com/snippets/css/sticky-footer/ */
+
+#___gatsby {
+  height: 100%;
+}
+
+#___gatsby > div {
+  height: calc(100% - var(--header-size));
+}
+
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: calc(100% - var(--header-size));
+  /* equal to footer height */
+  margin: 0 auto -25px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+footer, .page-wrap:after {
+  height: 25px;
+}
+/* end block */
