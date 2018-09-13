@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import headshot from '../images/headshot-square.jpg'
 
 import Layout from '../components/layout'
 

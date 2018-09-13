@@ -39,8 +39,52 @@ footer {
   padding: 0 4px;
 }
 
-/* from https://css-tricks.com/snippets/css/sticky-footer/ */
+.right-links > a {
+  padding: 12px 20px;
+  border-bottom: 5px solid transparent;
+  font-size: 1.5em;
+}
 
+.right-links > a:hover {
+  border-bottom: 5px solid blue;
+}
+
+.right-links > .socials {
+  display: inline-block;
+}
+
+.headshot {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.about-grid > .headshot {
+  grid-column: 1 / span 2;
+}
+
+.about-grid > .about-text {
+  grid-column: 3 / span 4;
+}
+
+.about-grid > .education {
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 2;
+}
+
+.about-grid > .work {
+  grid-column: 4 / span 3;
+  grid-row: 2 / span 2;
+}
+
+/* STICKY FOOTER */
+/* from https://css-tricks.com/snippets/css/sticky-footer/ */
 #___gatsby {
   height: 100%;
 }

@@ -14,7 +14,7 @@ export default () => {
   </footer>
 }
 
-const Social = () => (
+export const Social = () => (
   <StaticQuery query={graphql`
   query SocialQuery {
     site {
