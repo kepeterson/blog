@@ -32,7 +32,12 @@ const Education = () => {
     <div className="education" >
       <div>
         <span>Vanderbilt</span>
-        <p>I learned math and physics.</p>
+        <p>
+          I double-majored in Mathematics and Physics in the College of Arts and Sciences and graduated cum laude.
+          While attending, I interned at the Istituto Nazionale di Fisica Nucleare in Paudua, Italy writing software to interpret
+          particle collider data. The prior summer, I interned at Argonne National Laboratory in Chicago, Illinois working with
+          and interpretting data from the lab's atomic layer deposition system.
+        </p>
       </div>
     </div>
   )
@@ -47,7 +52,8 @@ const Work = () => {
       </div>
       <div>
         <span>Powerplan</span>
-        <p>Built something else.</p>
+        <p>My first job after college was as a consultant implementing enterprise accounting software. After a year, I transferred
+        out of the Professional Services department and into Development where I worked full-time on extending PowerPlan's core product.</p>
       </div>
     </div>
   )
