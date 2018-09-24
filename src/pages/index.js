@@ -5,10 +5,10 @@ import Layout from '../components/layout'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <h1>Index</h1>
+    <h1>Blog</h1>
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
     {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div key={node.id}>
+      <div key={node.id} className='post'>
         <Link to={node.fields.slug} style={{textDecoration: 'none'}}>
           <h3>{node.frontmatter.title}{" -- "}{node.frontmatter.date}</h3>
           <p>{node.excerpt}</p>

@@ -13,11 +13,10 @@ body {
 }
 
 footer, header {
-  background: rebeccapurple;
+  background: #176d04;
 }
 
 footer > a, header > a, footer > span {
-  color: white;
   text-decoration: none;
 }
 
@@ -30,6 +29,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
 }
 
 .socials svg {
@@ -46,7 +46,8 @@ footer {
 }
 
 .right-links > a:hover {
-  border-bottom: 5px solid blue;
+  border-bottom: 5px solid #5eb8ff;
+  transition: border-bottom 0.5s ease;
 }
 
 .right-links > .socials {
@@ -81,6 +82,21 @@ footer {
 .about-grid > .work {
   grid-column: 4 / span 3;
   grid-row: 2 / span 2;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.post {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.post:hover {
+  background-color: #5eb8ff;
+  transition: background-color 1s ease;
 }
 
 /* STICKY FOOTER */
