@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => (
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id} className='post'>
         <Link to={node.fields.slug} style={{textDecoration: 'none'}}>
-          <h3>{node.frontmatter.title}{" -- "}{node.frontmatter.date}</h3>
+          <h3>{node.frontmatter.title}<span style={{fontSize: ".75em", fontWeight: "normal"}}>{" - "}{node.frontmatter.date}</span></h3>
           <p>{node.excerpt}</p>
         </Link>
       </div>
