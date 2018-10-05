@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Social } from './footer'
+import { Social } from './Footer'
 
 const Header = ({ siteTitle }) => (
   <header>
