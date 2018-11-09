@@ -32,7 +32,6 @@ const Layout = ({ children, data }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <div className="page-wrap"
           style={{
-            maxWidth: 960,
             padding: '0px 1.0875rem 1.45rem',
             paddingTop: 0,
           }}

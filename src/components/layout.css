@@ -121,6 +121,7 @@ html, body {
   min-height: calc(100% - var(--header-size));
   /* equal to footer height */
   margin: 0 auto -25px;
+  max-width: 560px;
 }
 .page-wrap:after {
   content: "";
