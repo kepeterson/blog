@@ -5,16 +5,18 @@ import Layout from '../components/layout'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <h1>Blog</h1>
-    <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div key={node.id} className='post'>
-        <Link to={node.fields.slug} style={{textDecoration: 'none'}}>
-          <h3>{node.frontmatter.title}<span style={{fontSize: ".75em", fontWeight: "normal"}}>{" - "}{node.frontmatter.date}</span></h3>
-          <p>{node.excerpt}</p>
-        </Link>
-      </div>
-    ))}
+    <div style={{maxWidth: 560, margin: 'auto'}}>
+      <h1>Blog</h1>
+      <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <div key={node.id} className='post'>
+          <Link to={node.fields.slug} style={{textDecoration: 'none'}}>
+            <h3>{node.frontmatter.title}<span style={{fontSize: ".75em", fontWeight: "normal"}}>{" - "}{node.frontmatter.date}</span></h3>
+            <p>{node.excerpt}</p>
+          </Link>
+        </div>
+      ))}
+    </div>
   </Layout>
 )
 

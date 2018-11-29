@@ -69,6 +69,9 @@ footer {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 10px;
+  max-width: 960px;
+  margin: auto;
 }
 
 .about-grid > .headshot {
@@ -121,7 +124,6 @@ html, body {
   min-height: calc(100% - var(--header-size));
   /* equal to footer height */
   margin: 0 auto -25px;
-  max-width: 560px;
 }
 .page-wrap:after {
   content: "";
