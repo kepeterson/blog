@@ -10,14 +10,20 @@ import './layout.css'
 import ReactGA from 'react-ga'
 import { GA_TRACKING_ID } from '../config'
 
+let GAInitialized = false
 const initialize = () => {
   ReactGA.initialize(GA_TRACKING_ID)
   console.log("initialized.")
+  GAInitialized = true
 }
 
-initialize()
+console.log(process.env.NODE_ENV)
+if (process.env.NODE_ENV == "production") {
+  initialize()
+}
 
 const logPageView = () => {
+  if (!GAInitialized) return
   console.log(`Logging pageview for ${window.location.pathname}`)
 
   ReactGA.set({ page: window.location.pathname })
